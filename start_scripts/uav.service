@@ -1,0 +1,14 @@
+[Unit]
+Description=Start UAV script to exec auto-fly
+After=network.target graphical.target
+
+[Service]
+Environment="DISPLAY=:0"
+ExecStart=/home/orangepi/lan_planner/start_scripts/all.sh
+User=root
+Restart=no
+Type=simple
+
+
+[Install]
+WantedBy=multi-user.target
